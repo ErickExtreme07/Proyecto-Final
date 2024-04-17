@@ -71,7 +71,7 @@ public class Solicitud {
                 scanner.nextLine(); // Consumir el salto de línea
             }
             catch (Exception s) {
-                System.err.println("Ocurrió un error inesperado. Intente nuevamente.");
+                System.err.println("Ocurrio un error inesperado. Intente nuevamente.");
                 scanner.nextLine(); // Consumir el salto de línea
             }
         }
