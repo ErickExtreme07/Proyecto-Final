@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Solicitud {
 
@@ -10,7 +12,6 @@ public class Solicitud {
     private String telefono;
     private String tipoMascotaPreferida;
     private boolean solicitudAprobada;
-
 
     private static List<Solicitud> registroSolicitudes = new ArrayList<>();
 
@@ -22,8 +23,6 @@ public class Solicitud {
         this.tipoMascotaPreferida = tipoMascotaPreferida;
         this.solicitudAprobada = false;
     }
-
-
 
     public void imprimirSolicitud() {
         System.out.println("Nombre del cliente: " + nombreCliente);
@@ -44,34 +43,31 @@ public class Solicitud {
             System.out.println("3. Salir");
             System.out.println("Seleccione una opción:");
 
-
             try {
                 opcion = scanner.nextInt();
                 scanner.nextLine(); // Consumir el salto de línea
                 switch (opcion) {
-                case 1:
-                    registrarSolicitud(scanner);
-                    break;
-                case 2:
-                    verRegistroSolicitudes();
-                    break;
-                case 3:
-                    System.out.println("Saliendo del programa...");
-                    break;
-                default:
-                    System.out.println("Opción no válida. Intente nuevamente.");
-                    break;
-            } }
-            catch (InputMismatchException s) {
+                    case 1:
+                        registrarSolicitud(scanner);
+                        break;
+                    case 2:
+                        verRegistroSolicitudes();
+                        break;
+                    case 3:
+                        System.out.println("Saliendo del programa...");
+                        break;
+                    default:
+                        System.out.println("Opción no válida. Intente nuevamente.");
+                        break;
+                }
+            } catch (InputMismatchException e) {
                 System.err.println("Opción no válida. Intente nuevamente.");
                 scanner.nextLine(); // Consumir el salto de línea
-            }
-            catch (NumberFormatException s) {
+            } catch (NumberFormatException e) {
                 System.err.println("Opción (numero) no válida. Intente nuevamente.");
                 scanner.nextLine(); // Consumir el salto de línea
-            }
-            catch (Exception s) {
-                System.err.println("Ocurrio un error inesperado. Intente nuevamente.");
+            } catch (Exception e) {
+                System.err.println("Ocurrió un error inesperado. Intente nuevamente.");
                 scanner.nextLine(); // Consumir el salto de línea
             }
         }
@@ -82,8 +78,17 @@ public class Solicitud {
         System.out.println("\nIngrese su nombre:");
         String nombre = scanner.nextLine();
 
-        System.out.println("Ingrese su correo:");
-        String correo = scanner.nextLine();
+        // Validación del correo electrónico
+        String correo;
+        while (true) {
+            System.out.println("Ingrese su correo:");
+            correo = scanner.nextLine();
+            if (validarCorreo(correo)) {
+                break;
+            } else {
+                System.out.println("Correo electrónico no válido. Intente nuevamente.");
+            }
+        }
 
         System.out.println("Ingrese su telefono:");
         String telefono = scanner.nextLine();
@@ -95,6 +100,13 @@ public class Solicitud {
         registroSolicitudes.add(solicitud);
 
         System.out.println("Solicitud registrada exitosamente.");
+    }
+
+    public static boolean validarCorreo(String correo) {
+        String regex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(correo);
+        return matcher.matches();
     }
 
     public static void verRegistroSolicitudes() {
