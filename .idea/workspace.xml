@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6fab21f-a2e4-42ed-b040-de13c9c006a3" name="Changes" comment="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a6fab21f-a2e4-42ed-b040-de13c9c006a3" name="Changes" comment="Validación de correo añadida.&#10;&#10;Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +98,7 @@
       <updated>1712696582880</updated>
       <workItem from="1712696584195" duration="4691000" />
       <workItem from="1713332570050" duration="911000" />
-      <workItem from="1713333496458" duration="363000" />
+      <workItem from="1713333496458" duration="676000" />
     </task>
     <task id="LOCAL-00001" summary="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.">
       <option name="closed" value="true" />
@@ -126,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713333302848</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Validación de correo añadida.&#10;&#10;Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.">
+      <option name="closed" value="true" />
+      <created>1713334170875</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713334170876</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +164,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.&#10;&#10;Se agregó la validación del correo" />
     <MESSAGE value="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo." />
+    <MESSAGE value="Validación de correo añadida.&#10;&#10;Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo." />
+    <option name="LAST_COMMIT_MESSAGE" value="Validación de correo añadida.&#10;&#10;Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
