@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -43,10 +44,11 @@ public class Solicitud {
             System.out.println("3. Salir");
             System.out.println("Seleccione una opción:");
 
-            opcion = scanner.nextInt();
-            scanner.nextLine(); // Consumir el salto de línea
 
-            switch (opcion) {
+            try {
+                opcion = scanner.nextInt();
+                scanner.nextLine(); // Consumir el salto de línea
+                switch (opcion) {
                 case 1:
                     registrarSolicitud(scanner);
                     break;
@@ -59,6 +61,18 @@ public class Solicitud {
                 default:
                     System.out.println("Opción no válida. Intente nuevamente.");
                     break;
+            } }
+            catch (InputMismatchException s) {
+                System.err.println("Opción no válida. Intente nuevamente.");
+                scanner.nextLine(); // Consumir el salto de línea
+            }
+            catch (NumberFormatException s) {
+                System.err.println("Opción (numero) no válida. Intente nuevamente.");
+                scanner.nextLine(); // Consumir el salto de línea
+            }
+            catch (Exception s) {
+                System.err.println("Ocurrió un error inesperado. Intente nuevamente.");
+                scanner.nextLine(); // Consumir el salto de línea
             }
         }
         scanner.close();
