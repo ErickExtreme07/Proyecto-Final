@@ -7,15 +7,14 @@ import java.util.regex.Pattern;
 
 public class Solicitud {
 
-    private String nombreCliente;
-    private String correo;
-    private String telefono;
-    private String tipoMascotaPreferida;
-    private boolean solicitudAprobada;
+    private final String nombreCliente;
+    private final String correo;
+    private final String telefono;
+    private final String tipoMascotaPreferida;
+    private final boolean solicitudAprobada;
 
-    private static List<Solicitud> registroSolicitudes = new ArrayList<>();
+    private static final List<Solicitud> registroSolicitudes = new ArrayList<>();
 
-    // Constructor
     public Solicitud(String nombreCliente, String correo, String telefono, String tipoMascotaPreferida) {
         this.nombreCliente = nombreCliente;
         this.correo = correo;
@@ -64,7 +63,7 @@ public class Solicitud {
                 System.err.println("Opción no válida. Intente nuevamente.");
                 scanner.nextLine(); // Consumir el salto de línea
             } catch (NumberFormatException e) {
-                System.err.println("Opción (numero) no válida. Intente nuevamente.");
+                System.err.println("Opción (número) no válida. Intente nuevamente.");
                 scanner.nextLine(); // Consumir el salto de línea
             } catch (Exception e) {
                 System.err.println("Ocurrió un error inesperado. Intente nuevamente.");
@@ -90,31 +89,31 @@ public class Solicitud {
             }
         }
 
-        System.out.println("Ingrese su telefono:");
+        System.out.println("Ingrese su teléfono:");
         String telefono = scanner.nextLine();
 
-        System.out.println("Ingrese el tipo de mascota que prefiere:");
-        String tipoMascota = scanner.nextLine();
+        System.out.println("Ingrese el tipo de mascota preferida:");
+        //se supone que aquí se le tiene que agregar la lista de las mascotas :)
+        String tipoMascotaPreferida = scanner.nextLine();
 
-        Solicitud solicitud = new Solicitud(nombre, correo, telefono, tipoMascota);
+        Solicitud solicitud = new Solicitud(nombre, correo, telefono, tipoMascotaPreferida);
         registroSolicitudes.add(solicitud);
-
         System.out.println("Solicitud registrada exitosamente.");
     }
 
     public static boolean validarCorreo(String correo) {
-        String regex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(correo);
+        String pattern = "^[\\w-+]+(\\.[\\w-+]+)*@[\\w-]+(\\.[\\w-]+)*(\\.\\w{2,})$";
+        Pattern regex = Pattern.compile(pattern);
+        Matcher matcher = regex.matcher(correo);
         return matcher.matches();
     }
 
     public static void verRegistroSolicitudes() {
-        if (registroSolicitudes.isEmpty()) {
-            System.out.println("No hay solicitudes registradas.");
-            return;
+        System.out.println("\nRegistro de solicitudes:");
+        for (Solicitud solicitud : registroSolicitudes) {
+            solicitud.imprimirSolicitud();
+            System.out.println();
         }
-
         System.out.println("\nRegistro de solicitudes:");
         for (int i = 0; i < registroSolicitudes.size(); i++) {
             System.out.println("Solicitud " + (i + 1) + ":");
@@ -123,4 +122,3 @@ public class Solicitud {
         }
     }
 }
-
