@@ -1,0 +1,4 @@
+* Se cambió el modificador de acceso de los atributos de laclase Solicitud de private a final private.(Líneas 11-14)
+* Se cambió el modificador de acceso de la lista registroSolicitudes de private a final private static.(Línea 9)
+* Se modificó el método verRegistroSolicitudes()(Líneas 71-78)
+* Se redujo un poco el código al eliminar la repetición innecesaria del encabezado del registro de solicitudes en el   método verRegistroSolicitudes().
