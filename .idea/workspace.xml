@@ -4,6 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="a6fab21f-a2e4-42ed-b040-de13c9c006a3" name="Changes" comment="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/acciones/refugio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/acciones/registrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/acciones/registrar.java" afterDir="false" />
+    </list>
     <list default="true" id="a6fab21f-a2e4-42ed-b040-de13c9c006a3" name="Changes" comment="Validación de correo añadida.&#10;&#10;Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +29,14 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Elii247&quot;
     &quot;assignee&quot;: &quot;JorgeLopezUIP&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Best-Pets-Friendly/Proyecto-Final.git&quot;,
+    &quot;accountId&quot;: &quot;bbd6f706-3b26-4aed-ba04-8a1755cc14d5&quot;
     &quot;accountId&quot;: &quot;7aa7fb00-fcbf-4f6b-b2a9-8eb5adce03f5&quot;
   }
 }</component>
@@ -51,6 +59,10 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.registrar.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Team-a&quot;,
     &quot;Application.Solicitud.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -62,6 +74,10 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/crist/Documents/Projectos/Projecto Final/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
     &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -97,6 +113,8 @@
       <option name="presentableId" value="Default" />
       <updated>1712696582880</updated>
       <workItem from="1712696584195" duration="4691000" />
+      <workItem from="1713308907852" duration="3026000" />
+      <workItem from="1713312920665" duration="684000" />
       <workItem from="1713332570050" duration="911000" />
       <workItem from="1713333496458" duration="1717000" />
       <workItem from="1713335273251" duration="1001000" />
@@ -174,7 +192,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="origin/Team-a" />
                       </list>
                     </value>
                   </entry>
