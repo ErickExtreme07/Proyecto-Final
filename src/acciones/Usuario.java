@@ -1,15 +1,14 @@
 package acciones;
-
-import acciones.Verificacion;
-
-public class Usuario {
+import java.io.Serializable;
+public class Usuario implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String nombre;
     private String apellido;
     private String cedula;
     private String correo;
     private String direccion;
 
-    public Usuario(String nombre, String apellido, String cedula, String correo, String direccion) {
+    public Usuario(String nombre, String apellido, String cedula, String correo, String direccion, String respuesta) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;

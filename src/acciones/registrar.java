@@ -1,20 +1,64 @@
 package acciones;
 
 import java.io.*;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import acciones.Verificacion;
-
+import acciones.Solicitud;
 public class registrar {
-    public static void main(String[] args) {
+    public static void SysRefugio () {
         Scanner scanner = new Scanner(System.in);
         Refugio refugio = new Refugio();
         cargarDatos(refugio);
-        String nombreAdoptante = null, cedulaAdoptante, correoAdoptante, apellidoAdoptante, direccionAdoptante, respuesta, porpio;
+        String nombreAdoptante = null, cedulaAdoptante, correoAdoptante, apellidoAdoptante, direccionAdoptante, respuesta, porpio, CedulaV;
         int opcion = 0, opc = 0, edadAnimal;
         boolean usuarioRegistrado = false;
         Usuario adoptante = null;
 
-        System.out.println("\n\t***Bienvenido al Sistema de Adopcion de Animales***");
+        System.out.println("\n\t***Bienvenido al Sistema de registro para Adopcion de Animales***");
+        System.out.println("\nEs usted un usuario ya registrado?");
+        System.out.println("1. Si");
+        System.out.println("2. No");
+        try {
+            opcion = scanner.nextInt();
+            scanner.nextLine();
+        } catch (InputMismatchException e) {
+            System.err.println("Opción no válida. Intente nuevamente.");
+            scanner.nextLine();
+        } catch (NumberFormatException e) {
+            System.err.println("Opción (número) no válida. Intente nuevamente.");
+            scanner.nextLine();
+        } catch (Exception e) {
+            System.err.println("Ocurrió un error inesperado. Intente nuevamente.");
+            scanner.nextLine();
+        }
+
+        if (opcion == 1) {
+            System.out.println("\nPorfavor ingrese su Cedula: ");
+            CedulaV = scanner.nextLine();
+            if ((!Verificacion.validarCed(CedulaV))) {
+                System.out.println("Cedula invalida.");
+                System.out.println("\nIngrese nuevamente su Cedula: ");
+                CedulaV = scanner.nextLine();
+            }
+
+            File file = new File("Usuarios.dat");
+            if (file.exists()) {
+                try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+                    Usuario usuario = (Usuario) ois.readObject();
+                    if (usuario.getCedula().equals(CedulaV)) {
+                        System.out.println("Usuario encontrado");
+                        usuarioRegistrado = true;
+                    } else {
+                        System.err.println("No se encontró usuario con esta cédula.");
+                    }
+                } catch (IOException | ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                System.err.println("No se encontró el archivo de usuarios.");
+            }
+        }
         if (!usuarioRegistrado) {
             System.out.println("\n\nIngrese sus datos para registrase como adoptante: ");
 
@@ -48,11 +92,10 @@ public class registrar {
             scanner.nextLine();
 
             if (opcion == 2) {
-                System.out.println("Lista de animales en adopcion segun su especie");
+                System.out.println("Lista de animales en adopcion Disponibles");
                 opcion = scanner.nextInt();
                 scanner.nextLine();
-                //AQUI ENTRA EL EQUIPO DE SOLICITUDES///
-
+                refugio.mostrarAnimales();
 
             } else if (opcion == 1) {
                 System.out.println("Ingrese datos para adopcion: ");
@@ -76,12 +119,15 @@ public class registrar {
                     System.out.println("Felicidades puedes adoptar una mascota.");
                     System.out.println("\n!Registrado correctamente como adoptante!");
                     usuarioRegistrado = true;
+                    adoptante = new Usuario(nombreAdoptante, apellidoAdoptante, cedulaAdoptante, correoAdoptante, direccionAdoptante, respuesta);
+                    guardarUsurios(adoptante);
                 } else {
                     System.out.println("\nNo eres apto para adoptar una mascota.");
                     usuarioRegistrado = false;
                 }
 
             }
+        }
             do {
                 System.out.println("\nElige una de las siguientes opciones:");
                 System.out.println("1.Ingresar animales al refugio.");
@@ -94,14 +140,14 @@ public class registrar {
                 switch (opcion) {
                     case 1:
                         registrarAnimal(refugio, scanner);
+                        guardarDatos(refugio);
                     case 2:
-//
-                        ///AQUI ENTRA EL EQUIPO DE SOLICITUDES///
+                        refugio.mostrarAnimales();
                     case 3:
-//
+                        Solicitud.SysSolicitud();
                         break;
                     case 4:
-                        /////AQUI ENTRA EL EQUIPO DE SOLICITUDES///
+
                         break;
                     default:
                         System.out.println("Opcion no valida. Por favor, elija nuevamente.");
@@ -109,7 +155,6 @@ public class registrar {
                 }
             }
             while (opcion != 4);
-        }
     }
 
     //Registro Animal///
@@ -133,6 +178,23 @@ public class registrar {
 
         refugio.agregarAnimal(animal);
         System.out.println("Animal registrado en el refugio.");
+    }
+
+    //Guardar datos en archivo//
+    private static void guardarDatos(Refugio refugio) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("datos_refugio.dat"))) {
+            oos.writeObject(refugio);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void guardarUsurios(Usuario adoptante) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Usuarios.dat"))) {
+            oos.writeObject(adoptante);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     //cargar datos de archivo//

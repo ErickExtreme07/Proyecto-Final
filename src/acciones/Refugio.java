@@ -28,7 +28,7 @@ public class Refugio implements Serializable {
             System.out.println("No hay animales registrados en el refugio.");
         } else {
             for (Animal animal : listaAnimales) {
-                System.out.println(animal.getNombre() + " es un " + animal.getEspecie());
+                System.out.println(animal.getNombre() + " es un " + animal.getEspecie() + " | Edad " + animal.getEdad());
             }
         }
     }

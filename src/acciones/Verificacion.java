@@ -17,7 +17,7 @@ public class Verificacion {
     }
 
     public static boolean validarCed(String ced){
-        return ced.matches("^[A-Z]-[0-9]{1,5}-[0-9]{1,5}-[0-9]{1,5}|[0-9]{1,5}-[0-9]{1,5}-[0-9]{1,5}$");
+        return ced.matches("^[A-Z]-[0-9]{1,5}-[0-9]{1,6}-*[0-9]{0,5}|[0-9]{1,5}-[0-9]{1,5}-[0-9]{1,5}$");
     }
 
     public static boolean validarCorreo (String correo) {
