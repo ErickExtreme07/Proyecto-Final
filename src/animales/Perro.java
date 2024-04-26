@@ -15,15 +15,21 @@ public class Perro extends Animal{
     }
 
     public void alimentar() {
-        System.out.println(getNombre() + " El perro ha sido alimentado.");
+        System.out.println(getNombre() + "ha sido alimentado.");
     }
 
     public void dormir() {
-        System.out.println(getNombre() + " El perro está durmiendo.");
+        System.out.println(getNombre() + "está durmiendo.");
     }
 
     public void jugar() {
-        System.out.println(getNombre() + " El perro está jugando con su pelota.");
+        System.out.println(getNombre() + "está jugando con su pelota.");
     }
+public void morder() {
+        System.out.println(getNombre() + "te esta mordiendo.");
+    }
+
+    
+    
 }
 
