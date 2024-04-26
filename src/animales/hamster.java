@@ -25,10 +25,5 @@ public class hamster extends Animal{
     public void jugar() {
         System.out.println(getNombre() + "está corriendo en su rueda.");
     }
-     public void asustar() {
-        System.out.println(getNombre() + "se asusto.");
-    }
-     public void chillar () {
-        System.out.println(getNombre() + "está chillando.");
-    }
+    
 }
