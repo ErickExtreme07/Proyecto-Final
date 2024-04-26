@@ -29,8 +29,11 @@ public class Refugio implements Serializable {
         } else {
             for (Animal animal : listaAnimales) {
                 System.out.println(animal.getNombre() + " es un " + animal.getEspecie() + " | Edad " + animal.getEdad());
+
             }
+
         }
+
     }
 
     public void setListaAnimales(List<Animal> listaAnimales) {
