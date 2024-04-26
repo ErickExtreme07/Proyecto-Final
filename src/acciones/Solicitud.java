@@ -147,7 +147,6 @@ public class Solicitud {
             while ((line = reader.readLine()) != null) {
                 String nombre = obtenerValorDesdeLinea(line);
                 if (nombre == null) {
-                    System.err.println("Formato de archivo incorrecto. La línea no contiene la información esperada.");
                     continue;
                 }
                 String correo = obtenerValorDesdeLinea(reader.readLine());

@@ -141,13 +141,15 @@ public class registrar {
                     case 1:
                         registrarAnimal(refugio, scanner);
                         guardarDatos(refugio);
+                        break;
                     case 2:
                         refugio.mostrarAnimales();
+                        break;
                     case 3:
                         Solicitud.SysSolicitud();
                         break;
                     case 4:
-
+                        System.out.println("Saliendo del programa...");
                         break;
                     default:
                         System.out.println("Opcion no valida. Por favor, elija nuevamente.");

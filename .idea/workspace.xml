@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6fab21f-a2e4-42ed-b040-de13c9c006a3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a6fab21f-a2e4-42ed-b040-de13c9c006a3" name="Changes" comment="Archivo main principal modificado.&#10;Cambios en la funcion de registrar.java, se agrego el formato file, un guardado de los datos del usuario registrado para que al volver iniciar no se pierdan estos datos, un checkeo utilizando la cedula del usuario para comprobar si se encuentra en la base de datos.&#10;cambios en el archivo Solicitud.java. se agregaron los codigos necesarios para la persistencia, se movio la clase dentro del package acciones.&#10;se renombro el archivo refugio para evitar conflictos.&#10;se le añadio serialización a la clase Usuario para poder guardar los datos.&#10;Se hizo cambios en la verificación de las cedulas para permitir otro tipo de cedulas.&#10;se eliminaron las clases solicitudes.java, animales.java y Adoptante.java por ser innecesarias.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Adoptante.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cambios (Solicitud).txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cambios (Solicitud).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solicitud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/acciones/Solicitud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/acciones/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/acciones/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/acciones/Verificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/acciones/Verificacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/acciones/refugio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/acciones/Refugio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/acciones/Solicitud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/acciones/Solicitud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/acciones/registrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/acciones/registrar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/acciones/solicitudes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/animales/animales.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,25 +55,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Solicitud.executor": "Run",
-    "Application.registrar.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/crist/Documents/Projectos/Projecto Final/src/Main.java",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Solicitud.executor&quot;: &quot;Run&quot;,
+    &quot;Application.registrar.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/crist/Documents/Projectos/Projecto Final/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -108,8 +99,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
   </component>
@@ -127,6 +117,7 @@
       <workItem from="1713332570050" duration="911000" />
       <workItem from="1713333496458" duration="1717000" />
       <workItem from="1713335273251" duration="1001000" />
+      <workItem from="1714155541757" duration="1123000" />
     </task>
     <task id="LOCAL-00001" summary="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.">
       <option name="closed" value="true" />
@@ -184,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713336786669</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Archivo main principal modificado.&#10;Cambios en la funcion de registrar.java, se agrego el formato file, un guardado de los datos del usuario registrado para que al volver iniciar no se pierdan estos datos, un checkeo utilizando la cedula del usuario para comprobar si se encuentra en la base de datos.&#10;cambios en el archivo Solicitud.java. se agregaron los codigos necesarios para la persistencia, se movio la clase dentro del package acciones.&#10;se renombro el archivo refugio para evitar conflictos.&#10;se le añadio serialización a la clase Usuario para poder guardar los datos.&#10;Se hizo cambios en la verificación de las cedulas para permitir otro tipo de cedulas.&#10;se eliminaron las clases solicitudes.java, animales.java y Adoptante.java por ser innecesarias.">
+      <option name="closed" value="true" />
+      <created>1714016615496</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714016615496</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +216,8 @@
     <MESSAGE value="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.&#10;&#10;Se agregó la validación del correo" />
     <MESSAGE value="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo." />
     <MESSAGE value="Validación de correo añadida.&#10;&#10;Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo." />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Archivo main principal modificado.&#10;Cambios en la funcion de registrar.java, se agrego el formato file, un guardado de los datos del usuario registrado para que al volver iniciar no se pierdan estos datos, un checkeo utilizando la cedula del usuario para comprobar si se encuentra en la base de datos.&#10;cambios en el archivo Solicitud.java. se agregaron los codigos necesarios para la persistencia, se movio la clase dentro del package acciones.&#10;se renombro el archivo refugio para evitar conflictos.&#10;se le añadio serialización a la clase Usuario para poder guardar los datos.&#10;Se hizo cambios en la verificación de las cedulas para permitir otro tipo de cedulas.&#10;se eliminaron las clases solicitudes.java, animales.java y Adoptante.java por ser innecesarias." />
+    <option name="LAST_COMMIT_MESSAGE" value="Archivo main principal modificado.&#10;Cambios en la funcion de registrar.java, se agrego el formato file, un guardado de los datos del usuario registrado para que al volver iniciar no se pierdan estos datos, un checkeo utilizando la cedula del usuario para comprobar si se encuentra en la base de datos.&#10;cambios en el archivo Solicitud.java. se agregaron los codigos necesarios para la persistencia, se movio la clase dentro del package acciones.&#10;se renombro el archivo refugio para evitar conflictos.&#10;se le añadio serialización a la clase Usuario para poder guardar los datos.&#10;Se hizo cambios en la verificación de las cedulas para permitir otro tipo de cedulas.&#10;se eliminaron las clases solicitudes.java, animales.java y Adoptante.java por ser innecesarias." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
