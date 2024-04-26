@@ -15,10 +15,14 @@ public class conejo extends Animal{
     }
 
     public void alimentar() {
-        System.out.println(getNombre() + " El conejo ha sido alimentado.");
+        System.out.println(getNombre() + " El conejo come zanahoria.");
     }
-
-    public void dormir() {
+    
+    public void invernar() {
+        System.out.println(getNombre() + " El conejo hace su madriguera.");
+    }
+   
+   public void dormir() {
         System.out.println(getNombre() + " El conejo está durmiendo.");
     }
 
