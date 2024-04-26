@@ -15,14 +15,15 @@ public class hamster extends Animal{
     }
 
     public void alimentar() {
-        System.out.println(getNombre() + " El hamster ha sido alimentado.");
+        System.out.println(getNombre() + "ha sido alimentado.");
     }
 
     public void dormir() {
-        System.out.println(getNombre() + " El hamster está durmiendo.");
+        System.out.println(getNombre() + "está durmiendo.");
     }
 
     public void jugar() {
-        System.out.println(getNombre() + " El hamster está corriendo en su rueda.");
+        System.out.println(getNombre() + "está corriendo en su rueda.");
     }
+    
 }
