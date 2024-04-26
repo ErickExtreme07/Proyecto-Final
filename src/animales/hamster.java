@@ -31,5 +31,5 @@ public class hamster extends Animal{
      public void chillar () {
         System.out.println(getNombre() + "está chillando.");
     }
-
+    
 }

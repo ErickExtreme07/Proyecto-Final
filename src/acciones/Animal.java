@@ -18,21 +18,16 @@ public class Animal implements Serializable {
     public String getNombre() {
         return nombre;
     }
-    public String getespecie() {
-        return especie;
-    }
 
     public int getEdad() {
-        return this.edad;
+        return edad;
     }
 
     public String getEspecie() {
-        return this.especie;
+        return especie;
     }
 
     public String getEstadoSalud() {
-        return this.estadoSalud;
+        return estadoSalud;
     }
-
 }
-

@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6fab21f-a2e4-42ed-b040-de13c9c006a3" name="Changes" comment="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.">
+    <list default="true" id="a6fab21f-a2e4-42ed-b040-de13c9c006a3" name="Changes" comment="Archivo main principal modificado.&#10;Cambios en la funcion de registrar.java, se agrego el formato file, un guardado de los datos del usuario registrado para que al volver iniciar no se pierdan estos datos, un checkeo utilizando la cedula del usuario para comprobar si se encuentra en la base de datos.&#10;cambios en el archivo Solicitud.java. se agregaron los codigos necesarios para la persistencia, se movio la clase dentro del package acciones.&#10;se renombro el archivo refugio para evitar conflictos.&#10;se le añadio serialización a la clase Usuario para poder guardar los datos.&#10;Se hizo cambios en la verificación de las cedulas para permitir otro tipo de cedulas.&#10;se eliminaron las clases solicitudes.java, animales.java y Adoptante.java por ser innecesarias.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projecto Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto Final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/acciones/Solicitud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/acciones/Solicitud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/acciones/registrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/acciones/registrar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +24,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Elii247&quot;
+    &quot;assignee&quot;: &quot;JorgeLopezUIP&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Best-Pets-Friendly/Proyecto-Final.git&quot;,
+    &quot;accountId&quot;: &quot;bbd6f706-3b26-4aed-ba04-8a1755cc14d5&quot;
+    &quot;accountId&quot;: &quot;7aa7fb00-fcbf-4f6b-b2a9-8eb5adce03f5&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2esc9e4T7cUhUyJv2s1VtEeMnPf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -37,36 +55,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/crist/Documents/Projectos/Projecto Final/src/Main.java",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Solicitud.executor&quot;: &quot;Run&quot;,
+    &quot;Application.registrar.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/crist/Documents/Projectos/Projecto Final/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
+}</component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Proyecto Final" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+    <configuration name="Solicitud" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="acciones.Solicitud" />
       <module name="Proyecto Final" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Solicitud" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -77,6 +112,12 @@
       <option name="presentableId" value="Default" />
       <updated>1712696582880</updated>
       <workItem from="1712696584195" duration="4691000" />
+      <workItem from="1713308907852" duration="3026000" />
+      <workItem from="1713312920665" duration="684000" />
+      <workItem from="1713332570050" duration="911000" />
+      <workItem from="1713333496458" duration="1717000" />
+      <workItem from="1713335273251" duration="1001000" />
+      <workItem from="1714155541757" duration="1123000" />
     </task>
     <task id="LOCAL-00001" summary="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.">
       <option name="closed" value="true" />
@@ -86,7 +127,63 @@
       <option name="project" value="LOCAL" />
       <updated>1712705309284</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.&#10;&#10;Se agregó la validación del correo">
+      <option name="closed" value="true" />
+      <created>1713332882920</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713332882920</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.&#10;&#10;Se agregó la validación del correo">
+      <option name="closed" value="true" />
+      <created>1713333302848</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713333302848</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Validación de correo añadida.&#10;&#10;Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.">
+      <option name="closed" value="true" />
+      <created>1713334170875</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713334170876</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Validación de correo añadida.&#10;&#10;Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.">
+      <option name="closed" value="true" />
+      <created>1713334336321</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713334336321</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Validación de correo añadida.&#10;&#10;Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.">
+      <option name="closed" value="true" />
+      <created>1713335059901</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713335059901</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Validación de correo añadida.&#10;&#10;Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.">
+      <option name="closed" value="true" />
+      <created>1713336786669</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713336786669</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Archivo main principal modificado.&#10;Cambios en la funcion de registrar.java, se agrego el formato file, un guardado de los datos del usuario registrado para que al volver iniciar no se pierdan estos datos, un checkeo utilizando la cedula del usuario para comprobar si se encuentra en la base de datos.&#10;cambios en el archivo Solicitud.java. se agregaron los codigos necesarios para la persistencia, se movio la clase dentro del package acciones.&#10;se renombro el archivo refugio para evitar conflictos.&#10;se le añadio serialización a la clase Usuario para poder guardar los datos.&#10;Se hizo cambios en la verificación de las cedulas para permitir otro tipo de cedulas.&#10;se eliminaron las clases solicitudes.java, animales.java y Adoptante.java por ser innecesarias.">
+      <option name="closed" value="true" />
+      <created>1714016615496</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714016615496</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,7 +200,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="origin/Team-a" />
                       </list>
                     </value>
                   </entry>
@@ -116,18 +213,14 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.&#10;&#10;Se agregó la validación del correo" />
     <MESSAGE value="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo." />
+    <MESSAGE value="Validación de correo añadida.&#10;&#10;Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo." />
+    <MESSAGE value="Archivo main principal modificado.&#10;Cambios en la funcion de registrar.java, se agrego el formato file, un guardado de los datos del usuario registrado para que al volver iniciar no se pierdan estos datos, un checkeo utilizando la cedula del usuario para comprobar si se encuentra en la base de datos.&#10;cambios en el archivo Solicitud.java. se agregaron los codigos necesarios para la persistencia, se movio la clase dentro del package acciones.&#10;se renombro el archivo refugio para evitar conflictos.&#10;se le añadio serialización a la clase Usuario para poder guardar los datos.&#10;Se hizo cambios en la verificación de las cedulas para permitir otro tipo de cedulas.&#10;se eliminaron las clases solicitudes.java, animales.java y Adoptante.java por ser innecesarias." />
+    <option name="LAST_COMMIT_MESSAGE" value="Archivo main principal modificado.&#10;Cambios en la funcion de registrar.java, se agrego el formato file, un guardado de los datos del usuario registrado para que al volver iniciar no se pierdan estos datos, un checkeo utilizando la cedula del usuario para comprobar si se encuentra en la base de datos.&#10;cambios en el archivo Solicitud.java. se agregaron los codigos necesarios para la persistencia, se movio la clase dentro del package acciones.&#10;se renombro el archivo refugio para evitar conflictos.&#10;se le añadio serialización a la clase Usuario para poder guardar los datos.&#10;Se hizo cambios en la verificación de las cedulas para permitir otro tipo de cedulas.&#10;se eliminaron las clases solicitudes.java, animales.java y Adoptante.java por ser innecesarias." />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
