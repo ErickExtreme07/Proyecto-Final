@@ -29,7 +29,9 @@ public void morder() {
         System.out.println(getNombre() + "te esta mordiendo.");
     }
 
-    
+    public void ladrar() {
+    System.out.println(getNombre() + " está ladrando ¡Guau guau!");
+}
     
 }
 
