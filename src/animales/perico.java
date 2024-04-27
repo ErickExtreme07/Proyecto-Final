@@ -15,14 +15,17 @@ public class perico extends Animal{
     }
 
     public void alimentar() {
-        System.out.println(getNombre() + " El perico ha sido alimentado.");
+        System.out.println(getNombre() + " ha sido alimentado.");
     }
 
     public void dormir() {
-        System.out.println(getNombre() + " El perico está durmiendo.");
+        System.out.println(getNombre() + " está durmiendo.");
     }
 
     public void volar() {
-        System.out.println(getNombre() + " El perico está volando dentro de su jaula.");
+        System.out.println(getNombre() + " está volando dentro de su jaula.");
+    }
+      public void come() {
+        System.out.println(getNombre() + "come fruta.");
     }
 }

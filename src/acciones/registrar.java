@@ -62,7 +62,7 @@ public class registrar {
         if (!usuarioRegistrado) {
             System.out.println("\n\nIngrese sus datos para registrase como adoptante: ");
 
-            System.out.println("\nNombre: ");
+            System.out.print("\nNombre: ");
             nombreAdoptante = scanner.nextLine();
             if ((!Verificacion.validarNom(nombreAdoptante))) {
                 System.out.println("El nombre debe iniciar con una letra Mayuscula y sin numeros.");
@@ -70,7 +70,7 @@ public class registrar {
                 nombreAdoptante = scanner.nextLine();
             }
 
-            System.out.println("\nApellido: ");
+            System.out.print("\nApellido: ");
             apellidoAdoptante = scanner.nextLine();
             if ((!Verificacion.validarape(apellidoAdoptante))) {
                 System.out.println("La primera letra del apellido debe ser mayuscula.");
@@ -78,7 +78,7 @@ public class registrar {
                 apellidoAdoptante = scanner.nextLine();
             }
 
-            System.out.println("\nCedula: ");
+            System.out.print("\nCedula: ");
             cedulaAdoptante = scanner.nextLine();
             if ((!Verificacion.validarCed(cedulaAdoptante))) {
                 System.out.println("Cedula invalida.");
@@ -99,7 +99,7 @@ public class registrar {
 
             } else if (opcion == 1) {
                 System.out.println("Ingrese datos para adopcion: ");
-                System.out.println("Correo Electronico: ");
+                System.out.print("Correo Electronico: ");
                 correoAdoptante = scanner.nextLine();
                 if ((!Verificacion.validarCorreo(correoAdoptante))) {
                     System.out.println("Correo electronico invalido.");
@@ -107,7 +107,7 @@ public class registrar {
                     correoAdoptante = scanner.nextLine();
                 }
 
-                System.out.println("Ingrese su Direccion: ");
+                System.out.print("Ingrese su Direccion: ");
                 direccionAdoptante = scanner.nextLine();
 
                 System.out.println("Porque desea adoptar una mascota?");

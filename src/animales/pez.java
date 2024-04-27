@@ -15,14 +15,18 @@ public class pez extends Animal{
     }
 
     public void alimentar() {
-        System.out.println(getNombre() + " El pez ha sido alimentado.");
+        System.out.println(getNombre() + " Ha sido alimentado.");
+    }
+
+    public void jugar() {
+        System.out.println(getNombre() + " Juega al escondite.");
     }
 
     public void dormir() {
-        System.out.println(getNombre() + " El pez está durmiendo.");
+        System.out.println(getNombre() + " Duerme en su arrecife.");
     }
 
     public void nadar() {
-        System.out.println(getNombre() + " El pez nada en su pecera.");
+        System.out.println(getNombre() + " Nada en su pecera.");
     }
 }
