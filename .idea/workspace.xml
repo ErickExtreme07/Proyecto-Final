@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6fab21f-a2e4-42ed-b040-de13c9c006a3" name="Changes" comment="Archivo main principal modificado.&#10;Cambios en la funcion de registrar.java, se agrego el formato file, un guardado de los datos del usuario registrado para que al volver iniciar no se pierdan estos datos, un checkeo utilizando la cedula del usuario para comprobar si se encuentra en la base de datos.&#10;cambios en el archivo Solicitud.java. se agregaron los codigos necesarios para la persistencia, se movio la clase dentro del package acciones.&#10;se renombro el archivo refugio para evitar conflictos.&#10;se le añadio serialización a la clase Usuario para poder guardar los datos.&#10;Se hizo cambios en la verificación de las cedulas para permitir otro tipo de cedulas.&#10;se eliminaron las clases solicitudes.java, animales.java y Adoptante.java por ser innecesarias.">
+    <list default="true" id="a6fab21f-a2e4-42ed-b040-de13c9c006a3" name="Changes" comment="Pequeños Bug fixes en registrar.java y Solicitud.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/acciones/Solicitud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/acciones/Solicitud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/acciones/registrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/acciones/registrar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +116,8 @@
       <workItem from="1713332570050" duration="911000" />
       <workItem from="1713333496458" duration="1717000" />
       <workItem from="1713335273251" duration="1001000" />
-      <workItem from="1714155541757" duration="1123000" />
+      <workItem from="1714155541757" duration="5752000" />
+      <workItem from="1714242231088" duration="463000" />
     </task>
     <task id="LOCAL-00001" summary="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo.">
       <option name="closed" value="true" />
@@ -183,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714016615496</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Pequeños Bug fixes en registrar.java y Solicitud.java">
+      <option name="closed" value="true" />
+      <created>1714156829186</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714156829186</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +225,8 @@
     <MESSAGE value="Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo." />
     <MESSAGE value="Validación de correo añadida.&#10;&#10;Se Creo los Pacakges Animales y Acciones, las clases Animales, Perro, Gato, Hamster, Conejo, Pez, Perico, Adoptante, registrar, solicitudes y refugio, se extablecio una herarquia con la clase Animales como padre y las clases Perro, gato, hamster, conejo, pez y perico como clases hijo." />
     <MESSAGE value="Archivo main principal modificado.&#10;Cambios en la funcion de registrar.java, se agrego el formato file, un guardado de los datos del usuario registrado para que al volver iniciar no se pierdan estos datos, un checkeo utilizando la cedula del usuario para comprobar si se encuentra en la base de datos.&#10;cambios en el archivo Solicitud.java. se agregaron los codigos necesarios para la persistencia, se movio la clase dentro del package acciones.&#10;se renombro el archivo refugio para evitar conflictos.&#10;se le añadio serialización a la clase Usuario para poder guardar los datos.&#10;Se hizo cambios en la verificación de las cedulas para permitir otro tipo de cedulas.&#10;se eliminaron las clases solicitudes.java, animales.java y Adoptante.java por ser innecesarias." />
-    <option name="LAST_COMMIT_MESSAGE" value="Archivo main principal modificado.&#10;Cambios en la funcion de registrar.java, se agrego el formato file, un guardado de los datos del usuario registrado para que al volver iniciar no se pierdan estos datos, un checkeo utilizando la cedula del usuario para comprobar si se encuentra en la base de datos.&#10;cambios en el archivo Solicitud.java. se agregaron los codigos necesarios para la persistencia, se movio la clase dentro del package acciones.&#10;se renombro el archivo refugio para evitar conflictos.&#10;se le añadio serialización a la clase Usuario para poder guardar los datos.&#10;Se hizo cambios en la verificación de las cedulas para permitir otro tipo de cedulas.&#10;se eliminaron las clases solicitudes.java, animales.java y Adoptante.java por ser innecesarias." />
+    <MESSAGE value="Pequeños Bug fixes en registrar.java y Solicitud.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pequeños Bug fixes en registrar.java y Solicitud.java" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

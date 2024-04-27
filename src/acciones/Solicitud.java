@@ -75,7 +75,6 @@ public class Solicitud {
                 scanner.nextLine();
             }
         }
-        scanner.close();
     }
 
     public static void registrarSolicitud(Scanner scanner) {
@@ -98,7 +97,7 @@ public class Solicitud {
         String telefono = scanner.nextLine();
 
         System.out.println("Ingrese el tipo de mascota preferida:");
-        //se supone que aquí se le tiene que agregar la lista de las mascotas :)
+        System.out.print("\n-Perro\n-Gato\n-Perico\n-Conejo\n-Hamster\n-Pez");
         String tipoMascotaPreferida = scanner.nextLine();
 
         Solicitud solicitud = new Solicitud(nombre, correo, telefono, tipoMascotaPreferida);
