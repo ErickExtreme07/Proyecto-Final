@@ -25,13 +25,13 @@ public class Perro extends Animal{
     public void jugar() {
         System.out.println(getNombre() + "está jugando con su pelota.");
     }
-public void morder() {
+    public void morder() {
         System.out.println(getNombre() + "te esta mordiendo.");
     }
 
     public void ladrar() {
-    System.out.println(getNombre() + " está ladrando ¡Guau guau guau!");
-}
+        System.out.println(getNombre() + " está ladrando ¡Guau guau guau!");
+    }
     
 }
 
