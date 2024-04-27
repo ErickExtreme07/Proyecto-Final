@@ -30,7 +30,7 @@ public void morder() {
     }
 
     public void ladrar() {
-    System.out.println(getNombre() + " está ladrando ¡Guau guau!");
+    System.out.println(getNombre() + " está ladrando ¡Guau guau guau!");
 }
     
 }
