@@ -32,4 +32,9 @@ public class gato extends Animal{
     public void jugar() {
         System.out.println(getNombre() + " Está jugando con su juguete.");
     }
+
+    public void ronronear() {
+        System.out.println(getNombre() + " está ronroneando... ¡Purrr!");
+    }
+
 }
