@@ -35,7 +35,7 @@ public class conejo extends Animal{
     }
     
     public void buscarComida() {
-    System.out.println(getNombre() + " está buscando comida en el jardín.");
+        System.out.println(getNombre() + " está buscando comida en el jardín.");
     }
 
 }
