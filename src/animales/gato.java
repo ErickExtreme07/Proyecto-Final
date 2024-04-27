@@ -1,6 +1,6 @@
 package animales;
 
-Import accione.Animal;
+Import acciones.Animal;
 
 public class gato extends Animal{
     private String especie;
